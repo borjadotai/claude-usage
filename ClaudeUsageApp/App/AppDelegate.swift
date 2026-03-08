@@ -31,12 +31,24 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         )
 
         if let savedKey = KeychainService.load() {
-            print("[AppDelegate] Found saved session key")
+            print("[AppDelegate] Found saved session key in Keychain")
             fetcher.start(sessionKey: savedKey)
         } else {
-            print("[AppDelegate] No saved key, showing login")
-            fetcher.markNotLoggedIn()
-            showLoginWindow()
+            // Try auto-detect from browser cookies
+            print("[AppDelegate] No saved key, trying browser cookies...")
+            DispatchQueue.global(qos: .userInitiated).async {
+                let browserKey = BrowserCookieReader.findSessionKey()
+                DispatchQueue.main.async {
+                    if let browserKey {
+                        print("[AppDelegate] Auto-detected session from browser!")
+                        self.handleLoginSuccess(sessionKey: browserKey)
+                    } else {
+                        print("[AppDelegate] No browser session found, showing login")
+                        fetcher.markNotLoggedIn()
+                        self.showLoginWindow()
+                    }
+                }
+            }
         }
     }
 

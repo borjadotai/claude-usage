@@ -17,6 +17,8 @@
 		AA000008 /* LoginWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100008 /* LoginWindow.swift */; };
 		AA000009 /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100009 /* LoginWebViewController.swift */; };
 		AA000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA100012 /* Assets.xcassets */; };
+		AA000011 /* SafariCookieReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100013 /* SafariCookieReader.swift */; };
+		AA000012 /* BrowserCookieReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100014 /* BrowserCookieReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		AA100011 /* ClaudeUsage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClaudeUsage.entitlements; sourceTree = "<group>"; };
 		AA200001 /* ClaudeUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClaudeUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA100012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA100013 /* SafariCookieReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariCookieReader.swift; sourceTree = "<group>"; };
+		AA100014 /* BrowserCookieReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserCookieReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				AA100004 /* KeychainService.swift */,
 				AA100005 /* SessionMonitor.swift */,
 				AA100006 /* UsageFetcher.swift */,
+				AA100013 /* SafariCookieReader.swift */,
+				AA100014 /* BrowserCookieReader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -199,6 +205,8 @@
 				AA000007 /* MenuBarController.swift in Sources */,
 				AA000008 /* LoginWindow.swift in Sources */,
 				AA000009 /* LoginWebViewController.swift in Sources */,
+				AA000011 /* SafariCookieReader.swift in Sources */,
+				AA000012 /* BrowserCookieReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
