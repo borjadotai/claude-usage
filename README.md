@@ -1,8 +1,14 @@
-# ClaudeUsage
+<p align="center">
+  <img src="app_icon.png" width="128" height="128" alt="ClaudeUsage icon">
+  <br>
+  <h1>ClaudeUsage</h1>
+  <br>
+  <em>A macOS menu bar app that monitors your Claude Pro/Team usage quota in real time.</em>
+</p>
 
-A macOS menu bar app that monitors your Claude Pro/Team usage quota in real time.
-<img width="1270" height="572" alt="image" src="https://github.com/user-attachments/assets/04f077f8-d0c8-4050-9c75-7aee4c617c46" />
-
+<p align="center">
+  <img width="635" alt="ClaudeUsage screenshot" src="https://github.com/user-attachments/assets/04f077f8-d0c8-4050-9c75-7aee4c617c46" />
+</p>
 
 ## Features
 
