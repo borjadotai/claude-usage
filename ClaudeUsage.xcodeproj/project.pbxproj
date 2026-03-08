@@ -19,6 +19,7 @@
 		AA000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA100012 /* Assets.xcassets */; };
 		AA000011 /* SafariCookieReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100013 /* SafariCookieReader.swift */; };
 		AA000012 /* BrowserCookieReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100014 /* BrowserCookieReader.swift */; };
+		AA000013 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = AA100015 /* AppIcon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		AA100012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA100013 /* SafariCookieReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariCookieReader.swift; sourceTree = "<group>"; };
 		AA100014 /* BrowserCookieReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserCookieReader.swift; sourceTree = "<group>"; };
+		AA100015 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				AA100010 /* Info.plist */,
 				AA100011 /* ClaudeUsage.entitlements */,
 				AA100012 /* Assets.xcassets */,
+				AA100015 /* AppIcon.icns */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA000010 /* Assets.xcassets in Resources */,
+				AA000013 /* AppIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

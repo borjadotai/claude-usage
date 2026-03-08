@@ -58,10 +58,13 @@ final class MenuBarController: NSObject, NSPopoverDelegate {
             button.title = " …"
         case .loaded(let data):
             let pct = Int(data.fiveHour.utilization)
-            let color: NSColor = pct < 50 ? .systemGreen : (pct < 80 ? .systemYellow : .systemRed)
-            let title = NSMutableAttributedString(string: " \(pct)%")
-            title.addAttribute(.foregroundColor, value: color, range: NSRange(location: 1, length: title.length - 1))
-            button.attributedTitle = title
+            let color: NSColor = pct < 50
+                ? NSColor(red: 0.1, green: 0.6, blue: 0.2, alpha: 1.0)
+                : (pct < 80
+                    ? NSColor(red: 0.85, green: 0.5, blue: 0.0, alpha: 1.0)
+                    : NSColor(red: 0.75, green: 0.1, blue: 0.1, alpha: 1.0))
+            button.image = Self.claudeIcon(color: color)
+            button.title = " \(pct)%"
         case .error:
             button.title = " !"
         }
@@ -92,7 +95,7 @@ final class MenuBarController: NSObject, NSPopoverDelegate {
         }
     }
 
-    static func claudeIcon() -> NSImage {
+    static func claudeIcon(color: NSColor? = nil) -> NSImage {
         let s: CGFloat = 16
         let img = NSImage(size: NSSize(width: s, height: s), flipped: false) { rect in
             let ctx = NSGraphicsContext.current!.cgContext
@@ -101,8 +104,10 @@ final class MenuBarController: NSObject, NSPopoverDelegate {
                 (-90, 6.5), (-55, 5.5), (-20, 6.0), (15, 5.8), (45, 6.2),
                 (80, 5.5), (115, 6.0), (150, 5.8), (185, 5.2), (225, 5.5),
             ]
+            let strokeColor = color ?? NSColor.black
             ctx.setLineCap(.round)
-            ctx.setStrokeColor(NSColor.black.cgColor)
+            ctx.setStrokeColor(strokeColor.cgColor)
+            ctx.setFillColor(strokeColor.cgColor)
             ctx.setLineWidth(1.8)
             for r in rays {
                 let a = r.angle * .pi / 180
@@ -113,7 +118,7 @@ final class MenuBarController: NSObject, NSPopoverDelegate {
             ctx.fillEllipse(in: CGRect(x: cx - 1.5, y: cy - 1.5, width: 3, height: 3))
             return true
         }
-        img.isTemplate = true
+        img.isTemplate = color == nil
         return img
     }
 }
