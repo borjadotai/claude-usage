@@ -1,6 +1,8 @@
 # ClaudeUsage
 
 A macOS menu bar app that monitors your Claude Pro/Team usage quota in real time.
+<img width="1270" height="572" alt="image" src="https://github.com/user-attachments/assets/04f077f8-d0c8-4050-9c75-7aee4c617c46" />
+
 
 ## Features
 
